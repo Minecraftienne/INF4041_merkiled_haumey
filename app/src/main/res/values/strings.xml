@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Diet</string>
+    <string name="action_settings">Options</string>
+    <string name="onglet1">Onglet 1</string>
+    <string name="onglet2">Onglet 2</string>
+    <string name="onglet3">Onglet 3</string>
+    
+    <string name="poids">Poids (kg)</string>
+    <string name="taille">Taille (cm)</string>
+
+    <string name="imc1">Anorexie ou dénutrition</string>
+    <string name="imc2">Maigreur</string>
+    <string name="imc3">Corpulence normale</string>
+    <string name="imc4">Surpoids</string>
+    <string name="imc5">Obésité modérée (Classe 1)</string>
+    <string name="imc6">Obésité élevé (Classe 2)</string>
+    <string name="imc7">Obésité morbide ou massive</string>
+</resources>
