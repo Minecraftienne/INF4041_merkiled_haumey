@@ -4,9 +4,14 @@
     <string name="onglet1">Onglet 1</string>
     <string name="onglet2">Onglet 2</string>
     <string name="onglet3">Onglet 3</string>
-    
-    <string name="poids">Poids (kg)</string>
-    <string name="taille">Taille (cm)</string>
+
+    <string name="taille">Taille (cm) :</string>
+    <string name="poids">Poids (kg) :</string>
+    <string name="calcul">Calculer</string>
+    <string name="imc">IMC</string>
+
+    <string name="toast_taille_vide">Veuillez remplir le champ Taille</string>
+    <string name="toast_poids_vide">Veuillez remplir le champ Poids</string>
 
     <string name="imc1">Anorexie ou dénutrition</string>
     <string name="imc2">Maigreur</string>
