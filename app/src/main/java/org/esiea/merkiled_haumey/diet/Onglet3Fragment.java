@@ -48,8 +48,6 @@ public class Onglet3Fragment extends Fragment {
 
                     double imc = poidsNombre/(tailleCM*tailleCM);
 
-                    Log.d("TEST", "" + imc);
-
                     imcNombre.setText(context.getString(R.string.imc) + " : " + String.format(Locale.FRANCE, "%.1f", imc));
 
                     if (imc < 16.5)

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Diet</string>
     <string name="action_settings">Options</string>
-    <string name="onglet1">Onglet 1</string>
-    <string name="onglet2">Onglet 2</string>
-    <string name="onglet3">Onglet 3</string>
+    <string name="onglet1">Charts</string>
+    <string name="onglet2">Scan</string>
+    <string name="onglet3">IMC</string>
 
     <string name="taille">Taille (cm) :</string>
     <string name="poids">Poids (kg) :</string>
@@ -20,4 +20,10 @@
     <string name="imc5">Obésité modérée (Classe 1)</string>
     <string name="imc6">Obésité élevé (Classe 2)</string>
     <string name="imc7">Obésité morbide ou massive</string>
+
+    <string name="piechart_legend">Repas équilibré</string>
+    <string name="piechart_1">Protéines</string>
+    <string name="piechart_2">Glucides</string>
+    <string name="piechart_3">Légumes</string>
+    <string name="piechart_4">Sucreries</string>
 </resources>

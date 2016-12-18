@@ -1,7 +1,5 @@
 package org.esiea.merkiled_haumey.diet;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,13 +9,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-
-import android.widget.TextView;
 
 public class TabActivity extends AppCompatActivity {
 
@@ -55,6 +48,28 @@ public class TabActivity extends AppCompatActivity {
         tab_layout.addTab(tab_layout.newTab().setText(getString(R.string.onglet1).toUpperCase()));
         tab_layout.addTab(tab_layout.newTab().setText(getString(R.string.onglet2).toUpperCase()));
         tab_layout.addTab(tab_layout.newTab().setText(getString(R.string.onglet3).toUpperCase()));
+
+        // ce code est déprécié mais il permet de changer de fragment quand on clique sur le titre de l'onglet
+        tab_layout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
+        {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab)
+            {
+                mViewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab)
+            {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab)
+            {
+
+            }
+        });
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab_layout));
     }
