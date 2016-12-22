@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/layout_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txt_prod_nom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="85dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageProduit"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="14dp"
+            android:maxHeight="180px"
+            android:maxWidth="130px"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout_item"
+        android:id="@+id/view" />
+
+</RelativeLayout>

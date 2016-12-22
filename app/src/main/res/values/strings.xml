@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Diet</string>
+    <string name="app_name" translatable="false">Diet</string>
     <string name="action_settings">Options</string>
     <string name="onglet1">Charts</string>
     <string name="onglet2">Scan</string>
@@ -10,8 +10,15 @@
     <string name="calcul">Calculer</string>
     <string name="imc">IMC</string>
 
-    <string name="toast_taille_vide">Veuillez remplir le champ Taille</string>
-    <string name="toast_poids_vide">Veuillez remplir le champ Poids</string>
+    <string name="scanner">Scanner</string>
+
+    <string name="toast_taille_vide">Veuillez remplir le champ \"Taille\"</string>
+    <string name="toast_poids_vide">Veuillez remplir le champ \"Poids\"</string>
+    <string name="toast_no_scan">Pas de scan reçu !</string>
+    <string name="toast_no_produit">Produit non trouvé ...</string>
+    <string name="toast_permission_camera">Permission de la caméra requise pour que le scan fonctionne</string>
+    <string name="toast_permission_internet">Permission d\'Internet requise pour que le scan fonctionne</string>
+    <string name="toast_internet">Vous devez activer Internet pour utiliser cette fonctionnalité</string>
 
     <string name="imc1">Anorexie ou dénutrition</string>
     <string name="imc2">Maigreur</string>
@@ -26,4 +33,7 @@
     <string name="piechart_2">Glucides</string>
     <string name="piechart_3">Légumes</string>
     <string name="piechart_4">Sucreries</string>
+
+    <string name="scan_barcode">Scan un code barre</string>
+    <string name="recup_infos">Récupération d\'informations ...</string>
 </resources>

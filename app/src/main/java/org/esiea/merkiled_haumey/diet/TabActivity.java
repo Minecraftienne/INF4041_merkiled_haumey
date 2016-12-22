@@ -1,6 +1,10 @@
 package org.esiea.merkiled_haumey.diet;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -11,8 +15,11 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class TabActivity extends AppCompatActivity {
+
+    private static final int MY_PERMISSIONS_REQUEST_CAMERA = 2;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -72,6 +79,16 @@ public class TabActivity extends AppCompatActivity {
         });
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab_layout));
+
+        if (ContextCompat.checkSelfPermission(TabActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED) {
+
+            if (ActivityCompat.shouldShowRequestPermissionRationale(TabActivity.this, Manifest.permission.CAMERA)) {
+                Toast.makeText(TabActivity.this, TabActivity.this.getString(R.string.toast_permission_camera), Toast.LENGTH_SHORT).show();
+            }
+            else {
+                ActivityCompat.requestPermissions(TabActivity.this, new String[]{Manifest.permission.CAMERA}, MY_PERMISSIONS_REQUEST_CAMERA);
+            }
+        }
     }
 
     @Override
