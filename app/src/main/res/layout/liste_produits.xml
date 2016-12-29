@@ -14,11 +14,83 @@
             android:id="@+id/txt_prod_nom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="85dp"
             android:layout_alignParentStart="true"
+            android:layout_centerVertical="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_scoreNutritionnel"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="85dp"
             android:layout_marginStart="85dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_energie"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="85dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_matieresGrassesLipides"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="85dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_dontAcidesGrasSatures"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="105dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_glucides"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="85dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_dontSucres"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="105dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_proteines"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="85dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_sel"
+            android:layout_marginTop="180dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="85dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prod_sodium"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginStart="105dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -26,7 +98,7 @@
             android:id="@+id/imageProduit"
             android:layout_marginLeft="22dp"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="80dp"
             android:maxHeight="180px"
             android:maxWidth="130px"
             android:adjustViewBounds="true"
