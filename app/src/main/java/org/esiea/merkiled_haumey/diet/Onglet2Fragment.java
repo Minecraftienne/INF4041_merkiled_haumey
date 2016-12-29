@@ -11,12 +11,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import com.google.zxing.client.android.Intents;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -27,7 +24,8 @@ public class Onglet2Fragment extends Fragment {
     Context context;
     boolean scan;
     byte[] image_produit, image_defaut;
-    String nom_produit;
+    String nom_produit, score_nutritionnel_produit, energie_produit, matieresGrassesLipides_produit, dontAcidesGrasSatures_produit,
+            glucides_produit, dontSucres_produit, proteines_produit, sel_produit, sodium_produit;
     Produit p;
     ArrayList<Produit> array_list = new ArrayList<Produit>();
     ListeProduitsAdapter adapter;
@@ -95,11 +93,24 @@ public class Onglet2Fragment extends Fragment {
 
             image_produit = ScanActivity.imageByte;
             nom_produit = ScanActivity.nom;
+            score_nutritionnel_produit = ScanActivity.scoreNutritionnel;
+            energie_produit = ScanActivity.energie;
+            matieresGrassesLipides_produit = ScanActivity.matieresGrassesLipides;
+            dontAcidesGrasSatures_produit = ScanActivity.dontAcidesGrasSatures;
+            glucides_produit = ScanActivity.glucides;
+            dontSucres_produit = ScanActivity.dontSucres;
+            proteines_produit = ScanActivity.proteines;
+            sel_produit = ScanActivity.sel;
+            sodium_produit = ScanActivity.sodium;
 
             if (image_produit != null)
-                p = new Produit(nom_produit, image_produit);
+                p = new Produit(nom_produit, image_produit, score_nutritionnel_produit, energie_produit,
+                        matieresGrassesLipides_produit, dontAcidesGrasSatures_produit, glucides_produit,
+                        dontSucres_produit, proteines_produit, sel_produit, sodium_produit);
             else
-                p = new Produit(nom_produit, image_defaut);
+                p = new Produit(nom_produit, image_defaut, score_nutritionnel_produit, energie_produit,
+                        matieresGrassesLipides_produit, dontAcidesGrasSatures_produit, glucides_produit,
+                        dontSucres_produit, proteines_produit, sel_produit, sodium_produit);
 
             adapter.add(p);
 

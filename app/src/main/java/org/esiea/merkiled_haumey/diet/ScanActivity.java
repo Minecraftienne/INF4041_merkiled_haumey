@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -45,8 +44,6 @@ public class ScanActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
 
         trouver = false;
 
@@ -118,17 +115,17 @@ public class ScanActivity extends AppCompatActivity {
                 nomGenericName = new String (structure.getString("generic_name_fr").getBytes("ISO-8859-1"), "UTF-8"); // pour que les caractères accentués s'affichent bien
                 nomProductName = new String (structure.getString("product_name").getBytes("ISO-8859-1"), "UTF-8");
 
-                scoreNutritionnel = new String (structure.getString("nutrition-score-fr").getBytes("ISO-8859-1"), "UTF-8"); // mettre dessin A à E couleur
-                // http://fr.openfoodfacts.org/produit/3178530407396/petits-cookies-pepites-de-chocolat-bonne-maman
+                JSONObject objet = (JSONObject) structure.getJSONObject("nutriments");
 
-                energie = new String (structure.getString("energy").getBytes("ISO-8859-1"), "UTF-8");
-                matieresGrassesLipides = new String (structure.getString("fat").getBytes("ISO-8859-1"), "UTF-8");
-                dontAcidesGrasSatures = new String (structure.getString("satured-fat_value").getBytes("ISO-8859-1"), "UTF-8");
-                glucides = new String (structure.getString("carbohydrates").getBytes("ISO-8859-1"), "UTF-8");
-                dontSucres = new String (structure.getString("sugars").getBytes("ISO-8859-1"), "UTF-8");
-                proteines = new String (structure.getString("proteins").getBytes("ISO-8859-1"), "UTF-8");
-                sel = new String (structure.getString("salt").getBytes("ISO-8859-1"), "UTF-8");
-                sodium = new String (structure.getString("sodium").getBytes("ISO-8859-1"), "UTF-8");
+                scoreNutritionnel = new String (objet.getString("nutrition-score-fr").getBytes("ISO-8859-1"), "UTF-8");
+                energie = new String (objet.getString("energy").getBytes("ISO-8859-1"), "UTF-8");
+                matieresGrassesLipides = new String (objet.getString("fat").getBytes("ISO-8859-1"), "UTF-8");
+                dontAcidesGrasSatures = new String (objet.getString("saturated-fat_value").getBytes("ISO-8859-1"), "UTF-8");
+                glucides = new String (objet.getString("carbohydrates").getBytes("ISO-8859-1"), "UTF-8");
+                dontSucres = new String (objet.getString("sugars").getBytes("ISO-8859-1"), "UTF-8");
+                proteines = new String (objet.getString("proteins").getBytes("ISO-8859-1"), "UTF-8");
+                sel = new String (objet.getString("salt").getBytes("ISO-8859-1"), "UTF-8");
+                sodium = new String (objet.getString("sodium").getBytes("ISO-8859-1"), "UTF-8");
 
                 imageUrl = new String (structure.getString("image_small_url"));
             } catch (JSONException e) {

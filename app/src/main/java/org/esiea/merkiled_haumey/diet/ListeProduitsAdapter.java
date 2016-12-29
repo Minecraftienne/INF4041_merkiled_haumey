@@ -1,6 +1,5 @@
 package org.esiea.merkiled_haumey.diet;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +28,15 @@ public class ListeProduitsAdapter extends ArrayAdapter<Produit> {
 
     private class ViewHolder {
         TextView prodNomTxt;
+        TextView prodScoreNutritionnelTxt;
+        TextView prodEnergieTxt;
+        TextView prodMatieresGrassesLipidesTxt;
+        TextView prodDontAcidesGrasSaturesTxt;
+        TextView prodGlucidesTxt;
+        TextView prodDontSucresTxt;
+        TextView prodProteinesTxt;
+        TextView prodSelTxt;
+        TextView prodSodiumTxt;
         ImageView prodImageView;
     }
 
@@ -57,6 +65,15 @@ public class ListeProduitsAdapter extends ArrayAdapter<Produit> {
             holder = new ViewHolder();
 
             holder.prodNomTxt = (TextView) convertView.findViewById(R.id.txt_prod_nom);
+            holder.prodScoreNutritionnelTxt = (TextView) convertView.findViewById(R.id.txt_prod_scoreNutritionnel);
+            holder.prodEnergieTxt = (TextView) convertView.findViewById(R.id.txt_prod_energie);
+            holder.prodMatieresGrassesLipidesTxt = (TextView) convertView.findViewById(R.id.txt_prod_matieresGrassesLipides);
+            holder.prodDontAcidesGrasSaturesTxt = (TextView) convertView.findViewById(R.id.txt_prod_dontAcidesGrasSatures);
+            holder.prodGlucidesTxt = (TextView) convertView.findViewById(R.id.txt_prod_glucides);
+            holder.prodDontSucresTxt = (TextView) convertView.findViewById(R.id.txt_prod_dontSucres);
+            holder.prodProteinesTxt = (TextView) convertView.findViewById(R.id.txt_prod_proteines);
+            holder.prodSelTxt = (TextView) convertView.findViewById(R.id.txt_prod_sel);
+            holder.prodSodiumTxt = (TextView) convertView.findViewById(R.id.txt_prod_sodium);
             holder.prodImageView = (ImageView) convertView.findViewById(R.id.imageProduit);
 
             convertView.setTag(holder);
@@ -66,14 +83,29 @@ public class ListeProduitsAdapter extends ArrayAdapter<Produit> {
         Produit produit = (Produit) getItem(position);
 
         holder.prodNomTxt.setText(produit.getNom_produit());
+        holder.prodScoreNutritionnelTxt.setText(context.getString(R.string.scoreNutritionnel) + " " + produit.getScore_nutritionnel_produit());
+        holder.prodEnergieTxt.setText(context.getString(R.string.energie) + " " + produit.getEnergie_produit());
+        holder.prodMatieresGrassesLipidesTxt.setText(context.getString(R.string.matieresGrassesLipides) + " " + produit.getMatieresGrassesLipides_produit());
+        holder.prodDontAcidesGrasSaturesTxt.setText(context.getString(R.string.dontAcidesGrasSatures) + " " + produit.getDontAcidesGrasSatures_produit());
+        holder.prodGlucidesTxt.setText(context.getString(R.string.glucides) + " " + produit.getGlucides_produit());
+        holder.prodDontSucresTxt.setText(context.getString(R.string.dontSucres) + " " + produit.getDontSucres_produit());
+        holder.prodProteinesTxt.setText(context.getString(R.string.proteines) + " " + produit.getProteines_produit());
+        holder.prodSelTxt.setText(context.getString(R.string.sel) + " " + produit.getSel_produit());
+        holder.prodSodiumTxt.setText(context.getString(R.string.sodium) + " " + produit.getSodium_produit());
+
+        if (Integer.parseInt(produit.getScore_nutritionnel_produit()) < 0)
+            holder.prodScoreNutritionnelTxt.setTextColor(Color.parseColor("#009688"));
+        else if (Integer.parseInt(produit.getScore_nutritionnel_produit()) < 3)
+            holder.prodScoreNutritionnelTxt.setTextColor(Color.parseColor("#8BC34A"));
+        else if (Integer.parseInt(produit.getScore_nutritionnel_produit()) < 11)
+            holder.prodScoreNutritionnelTxt.setTextColor(Color.parseColor("#FFEB3B"));
+        else if (Integer.parseInt(produit.getScore_nutritionnel_produit()) < 19)
+            holder.prodScoreNutritionnelTxt.setTextColor(Color.parseColor("#FF9800"));
+        else
+            holder.prodScoreNutritionnelTxt.setTextColor(Color.parseColor("#F44336"));
 
         Bitmap imageBitmap  = BitmapFactory.decodeByteArray(produit.getImage_produit(), 0, produit.getImage_produit().length);
         holder.prodImageView.setImageBitmap(imageBitmap);
-
-
-              //  holder.prodDateTxt.setTextColor(Color.parseColor("#FF5722"));
-              //  holder.prodDateTxt.setTextColor(Color.RED);
-             //   holder.prodDateTxt.setTextColor(Color.parseColor("#4CAF50"));
 
         return convertView;
     }
