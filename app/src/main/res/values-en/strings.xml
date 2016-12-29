@@ -31,4 +31,16 @@
     <string name="toast_permission_internet">Internet permission required for scan to work</string>
     <string name="toast_poids_vide">Please fill the field \"Weight\"</string>
     <string name="toast_taille_vide">Please fill the field \"Height\"</string>
+    <string name="dontAcidesGrasSatures">including Saturated-fat :</string>
+    <string name="dontSucres">including Sugars :</string>
+    <string name="energie">Energy :</string>
+    <string name="glucides">Carbohydrates :</string>
+    <string name="proteines">Proteins :</string>
+    <string name="scoreNutritionnel">Nutrition score :</string>
+    <string name="sel">Salt :</string>
+    <string name="sodium">Sodium :</string>
+    <string name="intro_1_description">Charts change regularly and indicate various data.</string>
+    <string name="intro_2_description">You can scan a food product and see its nutritional composition.</string>
+    <string name="intro_3_description">By specifying your height and weight, the application calculates the BMI.</string>
+    <string name="matieresGrassesLipides">Fat :</string>
 </resources>
