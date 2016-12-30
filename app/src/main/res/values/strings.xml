@@ -5,6 +5,10 @@
     <string name="onglet2">Scan</string>
     <string name="onglet3">IMC</string>
 
+    <string name="intro_1_description">Les graphiques changent régulièrement et indiquent diverses informations.</string>
+    <string name="intro_2_description">On peut scanner un produit alimentaire et voir sa composition nutritionnelle.</string>
+    <string name="intro_3_description">En indiquant sa taille et son poids, l\'application calcule l\'IMC.</string>
+
     <string name="taille">Taille (cm) :</string>
     <string name="poids">Poids (kg) :</string>
     <string name="calcul">Calculer</string>
@@ -33,6 +37,16 @@
     <string name="piechart_2">Glucides</string>
     <string name="piechart_3">Légumes</string>
     <string name="piechart_4">Sucreries</string>
+
+    <string name="scoreNutritionnel">Score nutritionnel :</string>
+    <string name="energie">Energie :</string>
+    <string name="matieresGrassesLipides">Matières grasses / Lipides :</string>
+    <string name="dontAcidesGrasSatures">dont Acides gras saturés :</string>
+    <string name="glucides">Glucides :</string>
+    <string name="dontSucres">dont Sucres :</string>
+    <string name="proteines">Protéines :</string>
+    <string name="sel">Sel :</string>
+    <string name="sodium">Sodium :</string>
 
     <string name="scan_barcode">Scan un code barre</string>
     <string name="recup_infos">Récupération d\'informations ...</string>
